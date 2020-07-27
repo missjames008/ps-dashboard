@@ -13,12 +13,6 @@ export default function CampaignTable() {
   const [selectedSegmentId, setSelectedSegmentId] = useState();
   const [selectedMedia, setSelectedMedia] = useState();
   const [selectedStats, setSelectedStats] = useState();
-  // const name = useFormInput("");
-  // const text = useFormInput("");
-  // const status = useFormInput("");
-  // const segment_id = useFormInput("");
-  // const media = useFormInput("");
-  // const stats = useFormInput("");
 
   const delCampaign = (id) => {
     dispatch({

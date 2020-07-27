@@ -4,7 +4,7 @@ import CampaignForm from "../components/campaign-form";
 import CampaignTable from "../components/campaign-table";
 import { CampaignContextProvider } from "../contexts/campaign-context";
 
-export default function Campaigns() {
+export default function CampaignView() {
   return (
     <CampaignContextProvider>
       <Segment basic>
