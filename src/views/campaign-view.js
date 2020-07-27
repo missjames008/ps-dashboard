@@ -8,7 +8,7 @@ export default function CampaignView() {
   return (
     <CampaignContextProvider>
       <Segment basic>
-        <Header as="h3">Campaigns</Header>
+        <Header as="h3">Create New Campaign</Header>
         <CampaignForm />
         <CampaignTable />
       </Segment>

@@ -82,7 +82,7 @@ const reducer = (state, action) => {
     //   return {
     //     campaigns: [...state.campaigns, action.payload],
     //   }
-    case "DEL_CAMPAIGN":
+    case "DELETE_CAMPAIGN":
       return {
         campaigns: state.campaigns.filter(
           (campaign) => campaign.id !== action.payload

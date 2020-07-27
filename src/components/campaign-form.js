@@ -1,9 +1,9 @@
-import _ from "lodash";
 import React, { useContext, useState } from "react";
 import { Button, Form, Input, Segment } from "semantic-ui-react";
 import { CampaignContext } from "../contexts/campaign-context";
 
 export default function CampaignForm() {
+  //default values are empty
   const name = useFormInput("");
   const text = useFormInput("");
   const status = useFormInput("");
@@ -11,14 +11,13 @@ export default function CampaignForm() {
   const media = useFormInput("");
   const stats = useFormInput("");
 
-  // eslint-disable-next-line no-unused-vars
   const [state, dispatch] = useContext(CampaignContext);
 
   const onSubmit = () => {
     dispatch({
       type: "ADD_CAMPAIGN",
       payload: {
-        id: _.uniqueId(10),
+        id: state.campaigns.length + 1,
         name: name.value,
         text: text.value,
         status: status.value,

@@ -1,11 +1,20 @@
 import React, { useContext, useState } from "react";
-import { Button, Form, Icon, Input, Segment, Table } from "semantic-ui-react";
+import {
+  Button,
+  Form,
+  Header,
+  Icon,
+  Input,
+  Segment,
+  Table,
+} from "semantic-ui-react";
 import { CampaignContext } from "../contexts/campaign-context";
 
 export default function CampaignTable() {
   const [state, dispatch] = useContext(CampaignContext);
+  //set state for editing/updating
   const [editing, setEditing] = useState(false);
-  // Declare a local state to be used internally by this component
+  //set info for selected campaign
   const [selectedId, setSelectedId] = useState();
   const [selectedName, setSelectedName] = useState();
   const [selectedText, setSelectedText] = useState();
@@ -14,18 +23,21 @@ export default function CampaignTable() {
   const [selectedMedia, setSelectedMedia] = useState();
   const [selectedStats, setSelectedStats] = useState();
 
-  const delCampaign = (id) => {
+  //delete selected campaign
+  const deleteCampaign = (id) => {
     dispatch({
-      type: "DEL_CAMPAIGN",
+      type: "DELETE_CAMPAIGN",
       payload: id,
     });
   };
 
+  //call delete and clear functions
   const onRemoveCampaign = () => {
-    delCampaign(selectedId);
+    deleteCampaign(selectedId);
     setSelectedId(null); // Clear selection
   };
 
+  //map through campaigns data for table
   const rows = state.campaigns.map((campaign) => (
     <Table.Row
       key={campaign.id}
@@ -42,9 +54,11 @@ export default function CampaignTable() {
     >
       <Table.Cell>{campaign.id}</Table.Cell>
       <Table.Cell>{campaign.name}</Table.Cell>
+      <Table.Cell>{campaign.status}</Table.Cell>
     </Table.Row>
   ));
 
+  //for editing campaign-- not working ATM, need to set/save new values
   const editCampaign = (id, name, text, status, segment_id, media, stats) => {
     dispatch({
       type: "EDIT_CAMPAIGN",
@@ -66,11 +80,14 @@ export default function CampaignTable() {
 
   return (
     <Segment>
+      <Header as="h3">All Campaigns</Header>
+
       <Table celled striped selectable>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>Id</Table.HeaderCell>
             <Table.HeaderCell>Name</Table.HeaderCell>
+            <Table.HeaderCell>Status</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>{rows}</Table.Body>
