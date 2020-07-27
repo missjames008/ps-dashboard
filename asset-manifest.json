@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ps-dashboard/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/ps-dashboard/static/js/main.beb876f8.chunk.js",
+    "main.js.map": "/ps-dashboard/static/js/main.beb876f8.chunk.js.map",
+    "runtime-main.js": "/ps-dashboard/static/js/runtime-main.9e7c3626.js",
+    "runtime-main.js.map": "/ps-dashboard/static/js/runtime-main.9e7c3626.js.map",
+    "static/css/2.d9c29e73.chunk.css": "/ps-dashboard/static/css/2.d9c29e73.chunk.css",
+    "static/js/2.69708381.chunk.js": "/ps-dashboard/static/js/2.69708381.chunk.js",
+    "static/js/2.69708381.chunk.js.map": "/ps-dashboard/static/js/2.69708381.chunk.js.map",
+    "index.html": "/ps-dashboard/index.html",
+    "precache-manifest.71f2f2af13c571d4caf45146afeefa38.js": "/ps-dashboard/precache-manifest.71f2f2af13c571d4caf45146afeefa38.js",
+    "service-worker.js": "/ps-dashboard/service-worker.js",
+    "static/css/2.d9c29e73.chunk.css.map": "/ps-dashboard/static/css/2.d9c29e73.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/ps-dashboard/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.69708381.chunk.js.LICENSE.txt": "/ps-dashboard/static/js/2.69708381.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/ps-dashboard/static/media/outline-icons.f89ea91e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9e7c3626.js",
+    "static/css/2.d9c29e73.chunk.css",
+    "static/js/2.69708381.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.beb876f8.chunk.js"
+  ]
+}
