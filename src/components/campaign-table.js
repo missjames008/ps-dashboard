@@ -111,7 +111,7 @@ export default function CampaignTable() {
         </Table.Footer>
       </Table>
       <h1>Selected Campaign Details</h1>
-      <Form onSubmit={onEditCampaign}>
+      <Form>
         <Form.Group widths="3">
           <Form.Field width={4}>
             <Input placeholder="Enter Name" value={selectedName} required />
